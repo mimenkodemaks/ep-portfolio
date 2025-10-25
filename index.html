@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Mimenko</title>
+  <title>Mimenko — Game Designer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="script.js" defer></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
   <header class="p-6 text-center border-b border-gray-700">
-    <h1 class="text-4xl font-bold mb-2">Mimenko — Game Designer</h1>
-    <p class="text-gray-400">Создаю миры, где механики и история говорят на одном языке.</p>
+    <h1 id="title" class="text-4xl font-bold mb-2">Mimenko — Гейм-дизайнер</h1>
+    <p id="subtitle" class="text-gray-400">Создаю миры, где механики и история говорят на одном языке.</p>
+
+    <div class="mt-4 space-x-2">
+      <button onclick="setLanguage('ru')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">RU</button>
+      <button onclick="setLanguage('en')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">EN</button>
+      <button onclick="setLanguage('de')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">DE</button>
+    </div>
   </header>
 
   <main class="max-w-5xl mx-auto p-6">
-    <h2 class="text-2xl mb-4 border-b border-gray-700 pb-2">Проекты</h2>
+    <h2 id="projects-title" class="text-2xl mb-4 border-b border-gray-700 pb-2">Проекты</h2>
     <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </main>
 
   <footer class="p-6 text-center text-gray-500 border-t border-gray-700">
-    <p>© 2025 Mimenko. Сделано с ♥ и GitHub Pages.</p>
+    <p id="footer-text">© 2025 Mimenko. Сделано с ♥ и GitHub Pages.</p>
   </footer>
 </body>
 </html>
