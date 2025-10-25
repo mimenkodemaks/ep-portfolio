@@ -3,29 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mimenko — Game Designer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js" defer></script>
-</head>
-<body class="bg-gray-900 text-white font-sans">
-  <header class="p-6 text-center border-b border-gray-700">
-    <h1 id="title" class="text-4xl font-bold mb-2">Mimenko — Гейм-дизайнер</h1>
-    <p id="subtitle" class="text-gray-400">Создаю миры, где механики и история говорят на одном языке.</p>
+  <title>Портфолио Mimenko</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
 
-    <div class="mt-4 space-x-2">
-      <button onclick="setLanguage('ru')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">RU</button>
-      <button onclick="setLanguage('en')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">EN</button>
-      <button onclick="setLanguage('de')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700">DE</button>
-    </div>
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid #f0f0f0;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f0f0f0;
+      color: #121212;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      margin: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .project-card p {
+      margin: 0 1rem 1rem 1rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e1e;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mimenko Portfolio</h1>
+    <nav>
+      <a href="#projects">Проекты</a>
+      <a href="#about">О себе</a>
+      <a href="#contact">Контакты</a>
+    </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6">
-    <h2 id="projects-title" class="text-2xl mb-4 border-b border-gray-700 pb-2">Проекты</h2>
-    <div id="projects" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-  </main>
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="projects">
+      <div class="project-card" onclick="openProject('project1.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 1">
+        <h3>Проект 1</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+      <div class="project-card" onclick="openProject('project2.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 2">
+        <h3>Проект 2</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+      <div class="project-card" onclick="openProject('project3.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 3">
+        <h3>Проект 3</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+      <div class="project-card" onclick="openProject('project4.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 4">
+        <h3>Проект 4</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+      <div class="project-card" onclick="openProject('project5.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 5">
+        <h3>Проект 5</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+      <div class="project-card" onclick="openProject('project6.html')">
+        <img src="https://via.placeholder.com/400x150" alt="Project 6">
+        <h3>Проект 6</h3>
+        <p>Временный текст заглушки.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer class="p-6 text-center text-gray-500 border-t border-gray-700">
-    <p id="footer-text">© 2025 Mimenko. Сделано с ♥ и GitHub Pages.</p>
+  <section id="about">
+    <h2>О себе</h2>
+    <p>Временный текст заглушки о себе. Здесь будет информация о навыках, опыте и целях.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Email: example@mail.com</p>
+    <p>Telegram: @username</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mimenko
   </footer>
+
+  <script>
+    function openProject(url) {
+      window.location.href = url;
+    }
+  </script>
 </body>
 </html>
+
