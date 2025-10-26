@@ -1,94 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Elena Perezhogina — Portfolio</title>
-
-  <!-- Tailwind CDN (быстро и удобно для прототипа) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elena Perezhogina — Game Designer</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body class="min-h-screen text-white">
+<body class="bg-gradient-to-b from-gray-900 to-indigo-950 text-gray-100 font-sans">
 
-  <!-- Контейнер -->
-  <div class="site-bg min-h-screen flex flex-col">
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between border-b border-gray-800">
+    <div>
+      <h1 id="name" class="text-5xl font-bold mb-3">Elena Perezhogina</h1>
+      <p id="role" class="text-xl text-indigo-300">Game Designer & Story Architect</p>
+    </div>
 
-    <!-- Header -->
-    <header class="container mx-auto px-6 py-8 flex flex-col md:flex-row items-center md:items-start gap-6">
-      <div class="flex-1 flex flex-col gap-3">
-        <h1 id="hero-name" class="text-4xl md:text-5xl font-extrabold leading-tight">Elena Perezhogina</h1>
-        <p id="hero-role" class="text-gray-300 max-w-xl">Game Designer · Systems & Narrative</p>
+    <div class="mt-8 lg:mt-0 text-center">
+      <button onclick="setLanguage('ru')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">RU</button>
+      <button onclick="setLanguage('en')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">EN</button>
+      <button onclick="setLanguage('de')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">DE</button>
+    </div>
+  </header>
 
-        <!-- About snippet -->
-        <p id="about-snippet" class="mt-4 text-gray-400 max-w-2xl">
-          Короткое вводное — временный текст, место для твоего био на трёх языках.
-        </p>
+  <!-- ABOUT ME -->
+  <section class="max-w-5xl mx-auto px-6 py-16 border-b border-gray-800">
+    <h2 id="about-title" class="text-3xl font-semibold mb-4">About Me</h2>
+    <p id="about-text" class="text-gray-300 leading-relaxed">
+      I am a game designer passionate about building interactive worlds that merge storytelling, mechanics, and atmosphere.
+      My focus is on creating gameplay systems that make the player feel deeply connected to the universe they explore.
+    </p>
+  </section>
 
-        <!-- CTAs and language -->
-        <div class="mt-6 flex items-center gap-4">
-          <a id="cta-work" href="#projects" class="btn-primary inline-block">Мои работы</a>
-          <a id="cta-resume" href="#" class="btn-ghost inline-block">Скачать резюме</a>
-
-          <div class="ml-auto flex items-center gap-2">
-            <button class="lang-btn" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="de">DE</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Preview image (используй свою работу вместо заглушки) -->
-      <div class="w-full md:w-96 flex-shrink-0">
-        <div class="preview-card rounded-2xl overflow-hidden shadow-xl">
-          <!-- Поставь сюда свою работу: img/profile.jpg или любую ссылку -->
-          <img id="hero-image" src="https://via.placeholder.com/640x480?text=Your+Work+Preview" alt="Work preview" class="w-full h-64 object-cover">
-        </div>
-      </div>
-    </header>
-
-    <!-- Main -->
-    <main class="container mx-auto px-6 pb-12 flex-1">
-
-      <!-- About full -->
-      <section id="about" class="mt-6 grid md:grid-cols-3 gap-6 items-start">
-        <div class="md:col-span-2 bg-panel rounded-2xl p-6">
-          <h2 id="about-title" class="text-2xl font-semibold mb-3">About</h2>
-          <p id="about-text" class="text-gray-300 leading-relaxed">
-            Здесь временный текст "About me" на трёх языках. Опиши, чем занимаешься, роли, сильные стороны и философию дизайна.
-          </p>
-        </div>
-
-        <aside class="bg-panel rounded-2xl p-6">
-          <h3 id="contact-title" class="text-lg font-medium mb-2">Contact</h3>
-          <p id="contact-text" class="text-gray-300">Email: <a href="mailto:hello@example.com" class="text-indigo-300 hover:underline">hello@example.com</a></p>
-          <div class="mt-4 space-y-2 text-sm text-gray-400">
-            <div>Tools: Figma · Unity · Blender</div>
-            <div>Location: Germany (open for contracts)</div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Projects grid -->
-      <section id="projects" class="mt-10">
-        <h2 id="projects-title" class="text-2xl font-semibold mb-6">My Work</h2>
-
-        <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- JS will render 6 project cards here -->
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="container mx-auto px-6 py-6 text-gray-400 text-sm">
-      <div class="flex items-center justify-between">
-        <div id="footer-left">© <span id="footer-year"></span> Elena Perezhogina</div>
-        <div id="footer-right" class="text-xs">Made with ♥ · GitHub Pages</div>
-      </div>
-    </footer>
-  </div>
-
-</body>
-</html>
+  <!-- PROJECTS -->
+  <main class
