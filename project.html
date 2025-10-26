@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project — Elena Perezhogina</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="min-h-screen text-white">
+
+  <div class="site-bg min-h-screen">
+
+    <!-- Simple topbar -->
+    <nav class="container mx-auto px-6 py-6 flex items-center gap-4">
+      <a href="index.html" class="btn-ghost">← Back</a>
+      <div class="ml-auto flex items-center gap-2">
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pb-12">
+      <article id="project-article" class="bg-panel rounded-2xl p-6">
+        <header class="mb-6">
+          <h1 id="proj-title" class="text-3xl font-extrabold">Project Title</h1>
+          <p id="proj-sub" class="text-gray-300 mt-2">Короткое описание проекта</p>
+        </header>
+
+        <section id="proj-overview" class="mb-6">
+          <h3 class="text-xl font-semibold mb-2">Overview</h3>
+          <p id="proj-overview-text" class="text-gray-300 leading-relaxed"></p>
+        </section>
+
+        <section id="proj-role-tools" class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h4 class="font-semibold mb-2">My Role</h4>
+            <p id="proj-role" class="text-gray-300"></p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Tools Used</h4>
+            <p id="proj-tools" class="text-gray-300"></p>
+          </div>
+        </section>
+
+        <section id="proj-goals" class="mb-6">
+          <h4 class="font-semibold mb-2">Design Goals / Challenges</h4>
+          <p id="proj-goals-text" class="text-gray-300 leading-relaxed"></p>
+        </section>
+
+        <section id="proj-gallery" class="mb-6">
+          <h4 class="font-semibold mb-3">Gallery</h4>
+          <div id="gallery-grid" class="grid sm:grid-cols-2 gap-4">
+            <!-- images -->
+          </div>
+        </section>
+
+        <footer class="mt-6 text-sm text-gray-400">
+          <div id="proj-meta">Дата: — · Роль: —</div>
+        </footer>
+      </article>
+    </main>
+
+  </div>
+
+</body>
+</html>
