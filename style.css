@@ -1,1 +1,79 @@
+:root{
+  --accent: #7c3aed; /* фиолетовый акцент */
+  --panel: rgba(20,24,33,0.56);
+  --bg1: #020617;
+  --bg2: #0d0f1a;
+}
+
+/* Фон градиент */
+.site-bg{
+  background: radial-gradient(1200px 600px at 10% 20%, rgba(124,58,237,0.12), transparent 6%),
+              radial-gradient(900px 500px at 90% 80%, rgba(14,165,233,0.06), transparent 6%),
+              linear-gradient(180deg,var(--bg1), var(--bg2) 60%);
+  min-height: 100vh;
+}
+
+/* Панель карточек */
+.bg-panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+}
+
+/* Кнопки */
+.btn-primary{
+  background: linear-gradient(90deg,var(--accent), #5eead4);
+  color: #050617;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-ghost{
+  color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: .45rem .8rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Preview card */
+.preview-card img{
+  transition: transform .6s cubic-bezier(.2,.9,.2,1);
+}
+.preview-card:hover img{
+  transform: scale(1.03) rotate(-0.7deg);
+}
+
+/* Project card styles will be injected by JS classes but keep base */
+.project-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+}
+
+/* Language buttons */
+.lang-btn{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-weight: 600;
+}
+.lang-btn[data-active="true"]{
+  background: rgba(124,58,237,0.12);
+  border-color: rgba(124,58,237,0.6);
+  color: white;
+}
+
+/* Small screens tweaks */
+@media (max-width: 640px){
+  .preview-card img { height: 220px; object-position: center; }
+  #hero-name { font-size: 2rem; }
+}
 
