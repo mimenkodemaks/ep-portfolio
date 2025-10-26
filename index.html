@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +8,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="script.js" defer></script>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-indigo-950 text-gray-100 font-sans">
 
-  <!-- HEADER -->
-  <header class="max-w-6xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between border-b border-gray-800">
-    <div>
-      <h1 id="name" class="text-5xl font-bold mb-3">Elena Perezhogina</h1>
-      <p id="role" class="text-xl text-indigo-300">Game Designer & Story Architect</p>
-    </div>
-
-    <div class="mt-8 lg:mt-0 text-center">
-      <button onclick="setLanguage('ru')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">RU</button>
-      <button onclick="setLanguage('en')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">EN</button>
-      <button onclick="setLanguage('de')" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 mx-1">DE</button>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
+  <header class="p-8 border-b border-gray-700 text-center">
+    <h1 class="text-4xl font-bold mb-2" id="title">Elena Perezhogina</h1>
+    <p class="text-gray-400" id="subtitle">Game Designer & Visual Storyteller</p>
+    <div class="mt-4 space-x-2">
+      <button onclick="setLanguage('ru')" class="lang-btn">RU</button>
+      <button onclick="setLanguage('en')" class="lang-btn">EN</button>
+      <button onclick="setLanguage('de')" class="lang-btn">DE</button>
     </div>
   </header>
 
-  <!-- ABOUT ME -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-b border-gray-800">
-    <h2 id="about-title" class="text-3xl font-semibold mb-4">About Me</h2>
-    <p id="about-text" class="text-gray-300 leading-relaxed">
-      I am a game designer passionate about building interactive worlds that merge storytelling, mechanics, and atmosphere.
-      My focus is on creating gameplay systems that make the player feel deeply connected to the universe they explore.
-    </p>
-  </section>
+  <main class="max-w-5xl mx-auto p-6 space-y-16">
+    <!-- About -->
+    <section id="about" class="text-center">
+      <h2 id="about-title" class="text-2xl font-semibold mb-4">Обо мне</h2>
+      <p id="about-text" class="text-gray-400 leading-relaxed max-w-2xl mx-auto">
+        Я гейм-дизайнер, создающий игровые миры, где механики, история и визуал соединяются в единый опыт. 
+        Люблю баланс между интерактивностью и атмосферой, системами и эмоцией.
+      </p>
+    </section>
 
-  <!-- PROJECTS -->
-  <main class
+    <!-- My Work -->
+    <section id="projects">
+      <h2 id="projects-title" class="text-2xl font-semibold mb-6 text-center">Мои проекты</h2>
+      <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cards генерируются через JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-6 border-t border-gray-700 text-center text-gray-500">
+    <p id="footer-text">© 2025 Elena Perezhogina. Made with ♥ and GitHub Pages.</p>
+  </footer>
+</body>
+</html>
