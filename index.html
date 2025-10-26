@@ -1,162 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Mimenko</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elena Perezhogina — Portfolio</title>
 
-    header {
-      padding: 2rem;
-      text-align: center;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
+  <!-- Tailwind CDN (быстро и удобно для прототипа) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    header h1 {
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #f0f0f0;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid #f0f0f0;
-      border-radius: 4px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #f0f0f0;
-      color: #121212;
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background-color: #1e1e1e;
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 10px rgba(255,255,255,0.2);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .project-card h3 {
-      margin: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .project-card p {
-      margin: 0 1rem 1rem 1rem;
-      font-size: 0.9rem;
-      color: #cccccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Mimenko Portfolio</h1>
-    <nav>
-      <a href="#projects">Проекты</a>
-      <a href="#about">О себе</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-  </header>
+<body class="min-h-screen text-white">
 
-  <section id="projects">
-    <h2>Проекты</h2>
-    <div class="projects">
-      <div class="project-card" onclick="openProject('project1.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 1">
-        <h3>Проект 1</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-      <div class="project-card" onclick="openProject('project2.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 2">
-        <h3>Проект 2</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-      <div class="project-card" onclick="openProject('project3.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 3">
-        <h3>Проект 3</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-      <div class="project-card" onclick="openProject('project4.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 4">
-        <h3>Проект 4</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-      <div class="project-card" onclick="openProject('project5.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 5">
-        <h3>Проект 5</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-      <div class="project-card" onclick="openProject('project6.html')">
-        <img src="https://via.placeholder.com/400x150" alt="Project 6">
-        <h3>Проект 6</h3>
-        <p>Временный текст заглушки.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Контейнер -->
+  <div class="site-bg min-h-screen flex flex-col">
 
-  <section id="about">
-    <h2>О себе</h2>
-    <p>Временный текст заглушки о себе. Здесь будет информация о навыках, опыте и целях.</p>
-  </section>
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-8 flex flex-col md:flex-row items-center md:items-start gap-6">
+      <div class="flex-1 flex flex-col gap-3">
+        <h1 id="hero-name" class="text-4xl md:text-5xl font-extrabold leading-tight">Elena Perezhogina</h1>
+        <p id="hero-role" class="text-gray-300 max-w-xl">Game Designer · Systems & Narrative</p>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>Email: elena.perezhogina@protonmail.com</p>
-  </section>
+        <!-- About snippet -->
+        <p id="about-snippet" class="mt-4 text-gray-400 max-w-2xl">
+          Короткое вводное — временный текст, место для твоего био на трёх языках.
+        </p>
 
-  <footer>
-    &copy; 2025 Mimenko
-  </footer>
+        <!-- CTAs and language -->
+        <div class="mt-6 flex items-center gap-4">
+          <a id="cta-work" href="#projects" class="btn-primary inline-block">Мои работы</a>
+          <a id="cta-resume" href="#" class="btn-ghost inline-block">Скачать резюме</a>
 
-  <script>
-    function openProject(url) {
-      window.location.href = url;
-    }
-  </script>
+          <div class="ml-auto flex items-center gap-2">
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview image (используй свою работу вместо заглушки) -->
+      <div class="w-full md:w-96 flex-shrink-0">
+        <div class="preview-card rounded-2xl overflow-hidden shadow-xl">
+          <!-- Поставь сюда свою работу: img/profile.jpg или любую ссылку -->
+          <img id="hero-image" src="https://via.placeholder.com/640x480?text=Your+Work+Preview" alt="Work preview" class="w-full h-64 object-cover">
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container mx-auto px-6 pb-12 flex-1">
+
+      <!-- About full -->
+      <section id="about" class="mt-6 grid md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2 bg-panel rounded-2xl p-6">
+          <h2 id="about-title" class="text-2xl font-semibold mb-3">About</h2>
+          <p id="about-text" class="text-gray-300 leading-relaxed">
+            Здесь временный текст "About me" на трёх языках. Опиши, чем занимаешься, роли, сильные стороны и философию дизайна.
+          </p>
+        </div>
+
+        <aside class="bg-panel rounded-2xl p-6">
+          <h3 id="contact-title" class="text-lg font-medium mb-2">Contact</h3>
+          <p id="contact-text" class="text-gray-300">Email: <a href="mailto:hello@example.com" class="text-indigo-300 hover:underline">hello@example.com</a></p>
+          <div class="mt-4 space-y-2 text-sm text-gray-400">
+            <div>Tools: Figma · Unity · Blender</div>
+            <div>Location: Germany (open for contracts)</div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects grid -->
+      <section id="projects" class="mt-10">
+        <h2 id="projects-title" class="text-2xl font-semibold mb-6">My Work</h2>
+
+        <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- JS will render 6 project cards here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-6 text-gray-400 text-sm">
+      <div class="flex items-center justify-between">
+        <div id="footer-left">© <span id="footer-year"></span> Elena Perezhogina</div>
+        <div id="footer-right" class="text-xs">Made with ♥ · GitHub Pages</div>
+      </div>
+    </footer>
+  </div>
+
 </body>
 </html>
-
