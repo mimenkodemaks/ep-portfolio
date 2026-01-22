@@ -1,46 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elena Perezhogina — Game Designer</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Elena Perezhogina</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=1200" />
 </head>
+<body>
 
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
-  <header class="p-8 border-b border-gray-700 text-center">
-    <h1 class="text-4xl font-bold mb-2" id="title">Elena Perezhogina</h1>
-    <p class="text-gray-400" id="subtitle">Game Designer & Visual Storyteller</p>
-    <div class="mt-4 space-x-2">
-      <button onclick="setLanguage('ru')" class="lang-btn">RU</button>
-      <button onclick="setLanguage('en')" class="lang-btn">EN</button>
-      <button onclick="setLanguage('de')" class="lang-btn">DE</button>
-    </div>
-  </header>
+<header class="header">
+  <nav class="nav">
+    <ul>
+      <li>Home</li>
+      <li>About me</li>
+      <li>Portfolio</li>
+      <li>Price list</li>
+      <li>Reviews</li>
+    </ul>
+    <div class="lang">ENG · DE · RU</div>
+  </nav>
+</header>
 
-  <main class="max-w-5xl mx-auto p-6 space-y-16">
-    <!-- About -->
-    <section id="about" class="text-center">
-      <h2 id="about-title" class="text-2xl font-semibold mb-4">Обо мне</h2>
-      <p id="about-text" class="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-        Я гейм-дизайнер, создающий игровые миры, где механики, история и визуал соединяются в единый опыт. 
-        Люблю баланс между интерактивностью и атмосферой, системами и эмоцией.
-      </p>
-    </section>
+<section class="hero">
+  <h1>ELENA<br>PEREZHOGINA</h1>
+  <div class="divider">
+    <span></span>
+    <p>multi-designer</p>
+    <span></span>
+  </div>
+</section>
 
-    <!-- My Work -->
-    <section id="projects">
-      <h2 id="projects-title" class="text-2xl font-semibold mb-6 text-center">Мои проекты</h2>
-      <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Cards генерируются через JS -->
-      </div>
-    </section>
-  </main>
+<section class="about">
+  <div class="card text">
+    <h2>about me</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
 
-  <footer class="p-6 border-t border-gray-700 text-center text-gray-500">
-    <p id="footer-text">© 2025 Elena Perezhogina. Made with ♥ and GitHub Pages.</p>
-  </footer>
+  <div class="card contacts">
+    <ul>
+      <li>elena.perezhogina@protonmail.com</li>
+      <li>behance.net/elena.perezhogina</li>
+      <li>linkedin.com/in/elena-perezhogina</li>
+    </ul>
+    <button>CV DOWNLOAD</button>
+  </div>
+</section>
+
+<section class="portfolio">
+  <h2>portfolio</h2>
+  <div class="grid">
+    <div class="tile">GRAPHIC DESIGN</div>
+    <div class="tile">3D</div>
+    <div class="tile">2D</div>
+    <div class="tile">PROJECTS</div>
+    <div class="tile">COURSE PROJECTS</div>
+    <div class="tile">SKETCHBOOK</div>
+  </div>
+</section>
+
+<section class="prices">
+  <h2>price list</h2>
+  <div class="grid">
+    <div class="card">logo & brand</div>
+    <div class="card">social media design</div>
+    <div class="card">digital + 3d</div>
+    <div class="card">add-ons</div>
+  </div>
+</section>
+
 </body>
 </html>
