@@ -6,13 +6,18 @@
 
 body {
   font-family: "Georgia", serif;
-  background: radial-gradient(circle at top, #1e3a2f, #08110d);
+  /* Фоновое изображение вместо градиента */
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #e5eee9;
   min-width: 1200px;
 }
 
 .header {
   padding: 24px 64px;
+  /* Шапка с картинкой */
+  background: url('header.png') no-repeat center center;
+  background-size: cover;
 }
 
 .nav {
@@ -37,6 +42,10 @@ body {
 .hero {
   text-align: center;
   padding: 120px 0 80px;
+  /* Герой секции с фоном-картинкой */
+  background: url('hero.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
 }
 
 .hero h1 {
@@ -76,10 +85,12 @@ section {
 }
 
 .card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
+  /* Карточка теперь с картинкой */
+  background: url('card-bg.png') no-repeat center center;
+  background-size: cover;
   border-radius: 16px;
   padding: 32px;
+  color: #fff;
 }
 
 .card h2 {
@@ -96,12 +107,19 @@ section {
 }
 
 button {
-  background: rgba(255,255,255,0.15);
+  /* Кнопка с картинкой */
+  background: url('button.png') no-repeat center center;
+  background-size: cover;
   border: none;
   padding: 12px 24px;
-  color: #e5eee9;
+  color: #fff;
   letter-spacing: 0.1em;
   cursor: pointer;
+}
+
+button:hover {
+  background: url('button-hover.png') no-repeat center center;
+  background-size: cover;
 }
 
 .portfolio .grid,
@@ -114,12 +132,15 @@ button {
 
 .tile {
   height: 160px;
-  background: rgba(255,255,255,0.07);
+  /* Плитка с картинкой */
+  background: url('tile-bg.png') no-repeat center center;
+  background-size: cover;
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.12em;
   font-size: 14px;
-  opacity: 0.85;
+  opacity: 0.9;
+  color: #fff;
 }
