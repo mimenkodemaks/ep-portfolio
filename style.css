@@ -1,79 +1,125 @@
-:root{
-  --accent: #7c3aed; /* фиолетовый акцент */
-  --panel: rgba(20,24,33,0.56);
-  --bg1: #020617;
-  --bg2: #0d0f1a;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Фон градиент */
-.site-bg{
-  background: radial-gradient(1200px 600px at 10% 20%, rgba(124,58,237,0.12), transparent 6%),
-              radial-gradient(900px 500px at 90% 80%, rgba(14,165,233,0.06), transparent 6%),
-              linear-gradient(180deg,var(--bg1), var(--bg2) 60%);
-  min-height: 100vh;
+body {
+  font-family: "Georgia", serif;
+  background: radial-gradient(circle at top, #1e3a2f, #08110d);
+  color: #e5eee9;
+  min-width: 1200px;
 }
 
-/* Панель карточек */
-.bg-panel{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.04);
-  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+.header {
+  padding: 24px 64px;
 }
 
-/* Кнопки */
-.btn-primary{
-  background: linear-gradient(90deg,var(--accent), #5eead4);
-  color: #050617;
-  padding: .6rem 1rem;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn-ghost{
-  color: #cbd5e1;
-  border: 1px solid rgba(255,255,255,0.04);
-  padding: .45rem .8rem;
-  border-radius: 10px;
-  text-decoration: none;
+.nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
-/* Preview card */
-.preview-card img{
-  transition: transform .6s cubic-bezier(.2,.9,.2,1);
-}
-.preview-card:hover img{
-  transform: scale(1.03) rotate(-0.7deg);
+.lang {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-/* Project card styles will be injected by JS classes but keep base */
-.project-card {
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+.hero {
+  text-align: center;
+  padding: 120px 0 80px;
 }
 
-/* Language buttons */
-.lang-btn{
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.04);
-  padding: .35rem .6rem;
-  border-radius: 8px;
-  color: #cbd5e1;
+.hero h1 {
+  font-size: 96px;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.divider {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.divider span {
+  width: 120px;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+}
+
+.divider p {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+section {
+  padding: 80px 64px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.contacts ul {
+  list-style: none;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+button {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 12px 24px;
+  color: #e5eee9;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  font-weight: 600;
-}
-.lang-btn[data-active="true"]{
-  background: rgba(124,58,237,0.12);
-  border-color: rgba(124,58,237,0.6);
-  color: white;
 }
 
-/* Small screens tweaks */
-@media (max-width: 640px){
-  .preview-card img { height: 220px; object-position: center; }
-  #hero-name { font-size: 2rem; }
+.portfolio .grid,
+.prices .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
 }
 
+.tile {
+  height: 160px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  opacity: 0.85;
+}
